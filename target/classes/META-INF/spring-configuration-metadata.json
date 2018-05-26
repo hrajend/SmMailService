@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.siteminder.challenge.SmAppConfig",
+      "name": "smchallenge",
+      "type": "com.siteminder.challenge.SmAppConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.siteminder.challenge.SmAppConfig",
+      "name": "smchallenge.sm-mail-service-config",
+      "type": "java.util.List<com.siteminder.challenge.SmMailServiceConfig>"
+    }
+  ]
+}
