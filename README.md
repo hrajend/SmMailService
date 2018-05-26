@@ -24,9 +24,9 @@ Apache Maven 3.3.9
 
 __NOTE :__
 
-SENDGRID_KEY should be the {AUTH_TOKEN} alone. **Should not be in the format Bearer {AUTH_TOKEN}.**
+SENDGRID_KEY should be the {AUTH_TOKEN} alone. **Should not be in the format of `Bearer {AUTH_TOKEN}`.**
 
-MAILGUN_KEY should be the entire user:password **e.g. api:xxxxxxx.***
+MAILGUN_KEY should be the entire user:password. **e.g. api:xxxxxxx.***
 
 * Run `java -jar challenge-0.0.1-SNAPSHOT.jar`
 
@@ -70,7 +70,7 @@ curl -X POST \
 
 **FORM PARAMETER** : attachments (#Optional #MoreThanOnce)
 
-**ERROR CODES:*
+**ERROR CODES:**
 
 202 - Success - Mail request successfully queued
 
