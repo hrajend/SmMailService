@@ -38,7 +38,7 @@ curl -X POST \
   http://localhost:8080/emails \
   -F 'email_params={
      "from": {
-	      "email" : "hariharan.rajend@gmail.com"
+         "email" : "hariharan.rajend@gmail.com"
      },
      "to" : [
         {
@@ -144,6 +144,8 @@ Consumer can attach multiple files using the form parameter key "attachments".
 * Zero sized attachments are not allowed.
 
 ## TBD
+
+* Add unit test cases.
 
 * Dockerize the service.
 
