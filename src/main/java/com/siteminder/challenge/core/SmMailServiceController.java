@@ -16,13 +16,13 @@ import org.springframework.web.multipart.MultipartFile;
  */
 @RestController
 public class SmMailServiceController {
-	@Autowired
-	private SmMailService mailService;
-	
+    @Autowired
+    private SmMailService mailService;
+    
     @RequestMapping(value = "/emails", method = RequestMethod.POST)
     public @ResponseBody ResponseEntity<?> sendEmails(
-    					@RequestPart("email_params") String emailParams, 
-    					 @RequestPart("attachments") List<MultipartFile> attachments) {
-    	return mailService.sendEmail(emailParams, attachments);
+                        @RequestPart("email_params") String emailParams, 
+                         @RequestPart("attachments") List<MultipartFile> attachments) {
+        return mailService.sendEmail(emailParams, attachments);
     }
 }

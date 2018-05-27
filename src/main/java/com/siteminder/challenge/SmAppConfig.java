@@ -15,14 +15,14 @@ import org.springframework.validation.annotation.Validated;
 @ConfigurationProperties("smchallenge")
 @Validated
 public class SmAppConfig {
-	@NotEmpty
-	private List<SmMailServiceConfig> smMailServiceConfig;
+    @NotEmpty
+    private List<SmMailServiceConfig> smMailServiceConfig;
 
-	public List<SmMailServiceConfig> getSmMailServiceConfig() {
-		return smMailServiceConfig;
-	}
+    public List<SmMailServiceConfig> getSmMailServiceConfig() {
+        return smMailServiceConfig;
+    }
 
-	public void setSmMailServiceConfig(List<SmMailServiceConfig> smMailServiceConfig) {
-		this.smMailServiceConfig = smMailServiceConfig;
-	}
+    public void setSmMailServiceConfig(List<SmMailServiceConfig> smMailServiceConfig) {
+        this.smMailServiceConfig = smMailServiceConfig;
+    }
 }

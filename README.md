@@ -152,5 +152,3 @@ Consumer can attach multiple files using the form parameter key "attachments".
 * Cover more features of MailGun or SendGrid.
 
 * Address the in-line TODO's in source code.
-
-* Correct the spacing issues.
