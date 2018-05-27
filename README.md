@@ -1,19 +1,6 @@
 # SmMailService
 SmMailService is a REST based web service which exposes an API to send emails to multiple recipients (to, cc and bcc) along with multiple attachments using SendGrid or MailGun e-mailing services. Priority in which the e-mailing services should be used can be configured using application configurations. Please refer the service configurations to know further.
 
-# How to build ?
-
-## Pre-requisites
-Java - Open JDK 1.8.0_171
-
-Apache Maven 3.3.9
-
-## Steps
-
-* Clone this repo and traverse to the root of your local repo.
-* Run `mvn package`
-* Target binary will be generated in {root}/target/challenge-0.0.1-SNAPSHOT.jar
-
 # How to start the service ?
 
 * Clone this repo and traverse to {root}/release/.
@@ -127,6 +114,19 @@ Consumer can attach multiple files using the form parameter key "attachments".
 * Service should be up and listening on the default port 8080. The port is configurable in application properties. Please refer to the service configuration section to know more further.
 
 * Hit the API as shown in API usage section.
+
+# How to build from source ?
+
+## Pre-requisites
+Java - Open JDK 1.8.0_171
+
+Apache Maven 3.3.9
+
+## Steps
+
+* Clone this repo and traverse to the root of your local repo.
+* Run `mvn package`
+* Target binary will be generated in {root}/target/challenge-0.0.1-SNAPSHOT.jar
 
 # Service Configurations
 
