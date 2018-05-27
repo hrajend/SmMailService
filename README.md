@@ -18,17 +18,23 @@ Apache Maven 3.3.9
 
 * Clone this repo and traverse to {root}/release/.
 
-* Set the api keys or tokens required to consume MailGun or SendGrid mail service.
+* Set the API end points, api keys or tokens required to consume MailGun or SendGrid mail service.
     * `export SENDGRID_KEY={AUTH_TOKEN}`
     * `export MAILGUN_KEY={API-KEY}`
+    * `export SENDGRID_ENDPOINT={SENDGRID-API-ENDPOINT}`
+    * `export MAILGUN_ENDPOINT={MAILGUN-API-ENDPOINT}`
+
+* Run `java -jar challenge-0.0.1-SNAPSHOT.jar`
 
 __NOTE :__
 
 SENDGRID_KEY should be the {AUTH_TOKEN} alone. **Should not be in the format of `Bearer {AUTH_TOKEN}`.**
 
-MAILGUN_KEY should be the entire user:password. **e.g. api:xxxxxxx.***
+MAILGUN_KEY should be the entire user:password. **e.g. api:xxxxxxxxxx**
 
-* Run `java -jar challenge-0.0.1-SNAPSHOT.jar`
+SENDGRID_ENDPOINT should be the complete URL of SendGrid API end-point (https://api.sendgrid.com/v3/mail/send).
+
+MAILGUN_ENDPOINT should be the complete URL of MailGun API end-point (https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages).
 
 # REST API - Usage
 
@@ -152,3 +158,7 @@ Consumer can attach multiple files using the form parameter key "attachments".
 * Cover more features of MailGun or SendGrid.
 
 * Address the in-line TODO's in source code.
+
+* Add support for swagger docs and JavaDoc comments.
+
+* Internationalization of error messages returned from the service (if required).

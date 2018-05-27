@@ -10,7 +10,6 @@ public class Email {
     private String name;
 
     @JsonProperty("email")
-    @javax.validation.constraints.Email(message = "Saaaaa")
     private String email;
     
     public Email() {

@@ -84,13 +84,12 @@ public class SmMailService {
      */ 
     private void sendEmail(EmailParams params, List<MultipartFile> attachments) throws ApiResException {
         List<SmMailServiceConfig> mailServiceConfigs = appConfig.getSmMailServiceConfig();
-        boolean queued = false;
         ApiResException ex = null;
         
         for(SmMailServiceConfig config : mailServiceConfigs) {
             try {
                 sendEmailUsingService(config, params, attachments);
-                queued = true;
+                ex = null; // Reset the ex thrown in the previous iterartion. (Makes sense only after the 1st iteration)
             } catch(ApiResException apiEx) {
                 ex = apiEx;
             }
@@ -103,14 +102,14 @@ public class SmMailService {
                     throw ex;
                 }
             } else {
-                // No exception means successfully queue of mailing request. So return.
+                // No exception means successfull queue of mailing request. So return.
                 return;
             }
         }
         
-        // Not able to send e-mails using any of the mailing services.
+        // Tried all mailing services. Not able to send e-mails using any of the mailing services.
         // Return the error details returned by the last tried mailing service.
-        if(!queued) {
+        if(ex != null) {
             throw ex;
         }
     }
